@@ -34,7 +34,8 @@ stop "portal.service"
 stop "cockpit_main.service"
 stop "cockpit_daemon_main.service"
 
-[[ -d "${repo_path}/ays_automatic_cockpit_based_testing" ]] && { cd "${repo_path}/ays_automatic_cockpit_based_testing"; git pull; } || { echo "[-] can't find ${repo_path}/ays_automatic_cockpit_based_testing"; exit 5; }
+[[ -d "${repo_path}/ays_jumpscale8" ]] && { cd "${repo_path}/ays_jumpscale8"; git pull; } || { echo "[-] can't find ${repo_path}/ays_jumpscale8"; exit 5; }
+[[ -d "${repo_path}/jscockpit" ]] && { cd "${repo_path}/jscockpit"; git pull; } || { echo "[-] can't find ${repo_path}/jscockpit"; exit 5; }
 [[ -d "${repo_path}/jumpscale_core8" ]] && { cd ${repo_path}/jumpscale_core8; git pull; } || { echo "[-] Can't find ${repo_path}/jumpscale_core8"; exit 5; }
 [[ -d "${repo_path}/jumpscale_portal8" ]] && { cd ${repo_path}/jumpscale_portal8; git pull; } || {echo "[-] Can't find ${repo_path}/jumpscale_portal8"; exit 5; }
 
