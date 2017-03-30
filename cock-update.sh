@@ -43,7 +43,8 @@ run "portal.service"
 run "cockpit_main.service"
 run "cockpit_daemon_main.service"
 
-[[ -d "/optvar/cockpit_repos" ]] && echo "[+] Found dir /optvar/cockpit_repos" || echo "[-] Can't find dir /optvar/cockpit_repos"
+[[ -d "/optvar/cockpit_repos" ]] && cd /optvar/cockpit_repos" || echo "[-] Can't find dir /optvar/cockpit_repos"
+ays discover
 find /optvar/cockpit_repos/* -prune -type d | while read d; do cd "$d" && sleep 1 && ays restore; done
 
 echo "[+] Update Finished :)"
